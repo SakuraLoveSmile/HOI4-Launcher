@@ -1,0 +1,2233 @@
+{
+  "formatVersion": 1,
+  "name": "same-cache",
+  "description": "Nonmonotonic source offsets with repeated addresses after more than four other copies; leading source copy anchors dictionary offsets for distinct SAME-cache groups.",
+  "origin": {
+    "package": "@limrun/xdelta3-wasm",
+    "version": "0.2.0",
+    "license": "Apache-2.0",
+    "packageUrl": "https://registry.npmjs.org/@limrun/xdelta3-wasm/-/xdelta3-wasm-0.2.0.tgz",
+    "packageSha256": "2d03fdbb3a4a4e71f10cb9acec5e6dea92d52361118e1bbae0ba329584bdc672",
+    "encoderJsSha256": "ef7ff8b4c56a89e6f2567c34e03194cea8bf5631c63bb609ad202e30a3161b5a",
+    "embeddedJsSha256": "7e04bfc7c482a1f352cfd711773e0ac420907027815a5ca12437731fed362c7d",
+    "wasmBytes": 38861,
+    "wasmSha256": "bfb81d752492173d2b09ed587e7112f359e2ffe9219d268bf4096ee25e7f2e63",
+    "runtime": "system Node; statically reviewed pure JS/WASM encoder; no native executable",
+    "generation": ".work/generate-vcdiff-reference.cjs",
+    "targetInputChunkBytes": 16381
+  },
+  "recipeDefinition": "xorshift32-high-byte: uint32 state seeded nonzero; for each byte state ^= state<<13; state ^= state>>>17; state ^= state<<5; state >>>= 0; byte = state>>>24. Concatenate recipe entries; source slices use byte offsets.",
+  "source": {
+    "recipe": [
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 3073450022,
+        "bytes": 120000
+      }
+    ],
+    "bytes": 120000,
+    "sha256": "05b613a6e153c410c19fa1861725a7573354a47d22882a3e164257ccd8b48b0e"
+  },
+  "target": {
+    "recipe": [
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040531,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040532,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040533,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040534,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040535,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040536,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040537,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040538,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040539,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040548,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040549,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040550,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040551,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040552,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040553,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040554,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040555,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040556,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040565,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040566,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040567,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040568,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040569,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040570,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040571,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040572,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040573,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040582,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040583,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040584,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040585,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040586,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040587,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040588,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040589,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040590,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040599,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040600,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040601,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040602,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040603,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040604,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040605,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040606,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040607,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040616,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040617,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040618,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040619,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040620,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040621,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040622,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040623,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040624,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040633,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040634,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040635,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040636,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040637,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040638,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040639,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040640,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040641,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040650,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040651,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040652,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040653,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040654,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040655,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040656,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040657,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040658,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040667,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040668,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040669,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040670,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040671,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040672,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040673,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040674,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040675,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040684,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040685,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040686,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040687,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040688,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040689,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040690,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040691,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040692,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040701,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040702,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040703,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040704,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040705,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040706,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040707,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040708,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040709,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040718,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040719,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040720,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040721,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040722,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040723,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040724,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040725,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040726,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040735,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040736,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040737,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040738,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040739,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040740,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040741,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040742,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040743,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040752,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040753,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040754,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040755,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040756,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040757,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040758,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040759,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040760,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040769,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040770,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040771,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040772,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040773,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040774,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040775,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040776,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040777,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040786,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040787,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040788,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040789,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040790,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040791,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040792,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040793,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040794,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040803,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040804,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040805,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040806,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040807,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040808,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040809,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040810,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040811,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040820,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040821,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040822,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040823,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040824,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040825,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040826,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040827,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040828,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040837,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040838,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040839,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040840,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040841,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040842,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040843,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040844,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040845,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040854,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040855,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040856,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040857,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040858,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040859,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040860,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040861,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040862,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040871,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040872,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040873,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040874,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040875,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040876,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040877,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040878,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040879,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040888,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040889,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040890,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040891,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040892,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040893,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040894,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040895,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040896,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040905,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040906,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040907,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040908,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040909,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040910,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040911,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040912,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040913,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040922,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16397,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040923,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16669,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040924,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 16937,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040925,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 50000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040926,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 60100,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040927,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 70000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040928,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 80000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040929,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 90000,
+        "bytes": 96
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1931040930,
+        "bytes": 5
+      },
+      {
+        "type": "source",
+        "offset": 100000,
+        "bytes": 96
+      }
+    ],
+    "bytes": 21816,
+    "sha256": "e115fc75a764ee4019a878b7f5b3f42c641231d4700d4371c2b72f72c9f0fdcb"
+  },
+  "patch": {
+    "bytes": 1867,
+    "sha256": "54957cb6f2880dba4a34a4b16ce4bac89ed685b7497aa08d90e715ba48715143",
+    "base64": "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"
+  },
+  "coverage": {
+    "windows": 1,
+    "maxWindowBytes": 21816,
+    "opcodeCounts": {
+      "5": 140,
+      "6": 76,
+      "19": 2,
+      "35": 9,
+      "51": 49,
+      "67": 47,
+      "83": 47,
+      "99": 48,
+      "147": 14
+    },
+    "copyModeCounts": {
+      "0": 2,
+      "1": 9,
+      "2": 49,
+      "3": 47,
+      "4": 47,
+      "5": 48,
+      "8": 14
+    },
+    "instructionTypeCounts": {
+      "ADD": 216,
+      "COPY": 216
+    },
+    "pairedOpcodes": [],
+    "sourceWindows": 1,
+    "targetWindows": 0
+  }
+}

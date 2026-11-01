@@ -1,0 +1,113 @@
+{
+  "name": "ironclad-launcher",
+  "version": "0.28.0",
+  "private": true,
+  "description": "A focused, independent Hearts of Iron IV launcher for Windows",
+  "main": "electron/main.cjs",
+  "author": "IRONCLAD",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SakuraLoveSmile/HOI4-Launcher.git"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "start": "npm run build && electron .",
+    "build": "npm run build:performance-monitor && vite build",
+    "build:performance-monitor": "node scripts/build-performance-monitor.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "test:ui": "node scripts/test-ui.mjs",
+    "test:playsets-ui": "node scripts/test-playsets-ui.mjs",
+    "test:instances-ui": "node scripts/test-game-instances-ui.mjs",
+    "test:mod-menu-ui": "node scripts/test-mod-context-menu-ui.mjs",
+    "test:updates-ui": "node scripts/test-launcher-updates-ui.mjs",
+    "update:manifest": "node scripts/create-update-manifest.cjs",
+    "test:projects-ui": "node scripts/test-mod-projects-ui.mjs",
+    "test:projects-desktop": "electron scripts/test-mod-projects-desktop.cjs",
+    "test:i18n-ui": "node scripts/test-i18n-ui.mjs",
+    "test:diagnostics-ui": "node scripts/test-diagnostics-ui.mjs",
+    "test:resume-ui": "node scripts/test-pdx-resume-ui.mjs",
+    "test:patch-ui": "node scripts/test-pdx-patch-ui.mjs",
+    "test:thumbnails-ui": "node scripts/test-mod-thumbnails-ui.mjs",
+    "test:steam-missing-ui": "node scripts/test-steam-missing-ui.mjs",
+    "test:workshop-ui": "node scripts/test-workshop-ui.mjs",
+    "test:performance-ui": "node scripts/test-performance-ui.mjs",
+    "test:performance-comparison-ui": "node scripts/test-performance-comparison-ui.mjs",
+    "test:campaigns-ui": "node scripts/test-campaign-ui.mjs",
+    "test:snapshots-ui": "node scripts/test-snapshots-ui.mjs",
+    "test:coverage-ui": "node scripts/test-coverage-ui.mjs",
+    "test:compact-home-ui": "node scripts/test-compact-home-ui.mjs",
+    "test:workflows-desktop": "node scripts/test-workflows-desktop.mjs",
+    "test:desktop": "electron scripts/smoke-desktop.cjs",
+    "format": "prettier --write src electron scripts tests *.md *.json *.mjs index.html",
+    "package": "npm run build && electron-builder --win portable --x64",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "koffi": "3.3.6",
+    "lucide-react": "^0.468.0",
+    "openpgp": "6.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanitize-html": "^2.18.1",
+    "steamworks.js": "0.4.0",
+    "yauzl": "^3.4.0",
+    "yazl": "^3.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "electron": "^45.1.0",
+    "electron-builder": "^26.0.12",
+    "playwright": "^1.56.0",
+    "prettier": "^3.6.2",
+    "vite": "^6.1.0"
+  },
+  "build": {
+    "appId": "io.ironclad.launcher",
+    "productName": "IRONCLAD",
+    "directories": {
+      "output": "release"
+    },
+    "electronDist": "node_modules/electron/dist",
+    "asarUnpack": [
+      "node_modules/steamworks.js/dist/win64/**/*",
+      "node_modules/koffi/**/*",
+      "node_modules/@koromix/koffi-win32-x64/**/*",
+      "node_modules/openpgp/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/game-performance-monitor.exe",
+        "to": "performance-monitor.exe"
+      },
+      {
+        "from": "scripts/native/game-performance-monitor.cs",
+        "to": "performance-monitor-source.cs"
+      },
+      {
+        "from": "licenses",
+        "to": "licenses",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "src/locales/*.json",
+      "src/language-info.json",
+      "src/workshop-filters.json",
+      "assets/icon.ico",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico",
+      "signAndEditExecutable": true
+    },
+    "portable": {
+      "artifactName": "IRONCLAD-${version}-portable.exe"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectedAt": "2026-10-29T06:57:19.017Z",
+  "package": "openpgp",
+  "version": "6.3.2",
+  "upstreamLicense": "LGPL-3.0+",
+  "upstreamTag": "v6.3.2",
+  "npmGitHead": "5f33328a3b601fb9c9dce310d1ecc137db0dbc75",
+  "sourceArchiveLimitBytes": 10485760,
+  "remoteCodeExecuted": false,
+  "records": [
+    {
+      "name": "openpgp-6.3.2-source.tar.gz",
+      "origin": "https://codeload.github.com/openpgpjs/openpgpjs/tar.gz/refs/tags/v6.3.2",
+      "bytes": 1196260,
+      "sha256": "1e0b14b06e18a958960c36749c02b575c0bd16df2b6b8bf3ed5c11938e61ff05"
+    },
+    {
+      "name": "GPL-3.0.txt",
+      "origin": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "name": "LGPL-3.0.txt",
+      "origin": "node_modules/openpgp/LICENSE",
+      "bytes": 7652,
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+    }
+  ]
+}

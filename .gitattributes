@@ -1,0 +1,2 @@
+# Keep signed fixtures, vendored checksums and release sources byte-for-byte.
+* -text

@@ -1,0 +1,63 @@
+{
+  "package": "xz-decompress",
+  "version": "0.2.3",
+  "gitHead": "02e7ec3ee164de24cd3d1baf76911dd0be68a7c0",
+  "packageUrl": "https://registry.npmjs.org/xz-decompress/-/xz-decompress-0.2.3.tgz",
+  "registryIntegrity": "sha512-O8v6HG8T0PrKBcpyWA13GkSYWFvncwzuzcLx5A7++l3HsE3atmoetXjIxrZ/JV/nbvSZ7WS4+3XvREZuVn+rEA==",
+  "files": [
+    {
+      "name": "source/native/xz-decompress.c",
+      "url": "https://raw.githubusercontent.com/httptoolkit/xz-decompress/02e7ec3ee164de24cd3d1baf76911dd0be68a7c0/src/native/xz-decompress.c",
+      "bytes": 1012,
+      "sha256": "f723b4ea6b01f47d30e4fb9ccfdcd3652797ded493673f0a2be3b11cc871104e"
+    },
+    {
+      "name": "source/native/xz-decompress.h",
+      "url": "https://raw.githubusercontent.com/httptoolkit/xz-decompress/02e7ec3ee164de24cd3d1baf76911dd0be68a7c0/src/native/xz-decompress.h",
+      "bytes": 307,
+      "sha256": "77fc54d63cb9ddeb49e9a4734cf35a7b4f80a7cd24266ec64d7d77d40be5a0e4"
+    },
+    {
+      "name": "source/Makefile",
+      "url": "https://raw.githubusercontent.com/httptoolkit/xz-decompress/02e7ec3ee164de24cd3d1baf76911dd0be68a7c0/Makefile",
+      "bytes": 2239,
+      "sha256": "10c9f3a9ff63dfd117411f5dcc1d95a99380f40a90a0ddcac18ce9374c825585"
+    },
+    {
+      "name": "source/walloc.c",
+      "url": "https://raw.githubusercontent.com/wingo/walloc/a93409f5ebd49c875514c5fee30d3b151f7b0882/walloc.c",
+      "bytes": 16085,
+      "sha256": "d6e61dcf02b787cf5d977f70995176b20a49b5d40584913cc7768e44c77082ff"
+    },
+    {
+      "name": "COPYING-XZ-EMBEDDED.txt",
+      "url": "https://raw.githubusercontent.com/tukaani-project/xz-embedded/6f0e0c4/COPYING",
+      "bytes": 322,
+      "sha256": "c8aae478cc4534bd4ae68e5fb42593a01b5d9196eb2f63a0aadc499134e6cbf8"
+    },
+    {
+      "name": "xz-decompress-0.2.3.tgz",
+      "source": "xz-decompress 0.2.3 npm package",
+      "bytes": 14444,
+      "sha256": "b590b7ea774bd82e812d74c572d6c9fcd4abef4da752c974e8d335439f63e69c"
+    },
+    {
+      "name": "xz-decompress.js",
+      "source": "xz-decompress 0.2.3 npm package",
+      "bytes": 26506,
+      "sha256": "3e1c069c559e5c08e2c6a237ecb93687151725e517d36847c3d10b2b8975a93c"
+    },
+    {
+      "name": "package.json",
+      "source": "xz-decompress 0.2.3 npm package",
+      "bytes": 1559,
+      "sha256": "93f914fa5b696b63c936609f39e4ba378d2e640aee88959d7a9888fba918a98a"
+    },
+    {
+      "name": "UPSTREAM-README.md",
+      "source": "xz-decompress 0.2.3 npm package",
+      "bytes": 3750,
+      "sha256": "d8ec6aa96d2eee9bec5cbefb14a769ab0c4ad4ca4b6c2950c67ef5d82b2568b7"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+release/
+test-results/
+mods/
+backups/
+diagnostics/
+.work/
+assets/game-performance-monitor.exe
+*.log

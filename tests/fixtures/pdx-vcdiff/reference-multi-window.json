@@ -1,0 +1,95 @@
+{
+  "formatVersion": 1,
+  "name": "multi-window",
+  "description": "Five independent reference-encoded windows concatenated under one standard VCDIFF header; caches reset at each window.",
+  "origin": {
+    "package": "@limrun/xdelta3-wasm",
+    "version": "0.2.0",
+    "license": "Apache-2.0",
+    "packageUrl": "https://registry.npmjs.org/@limrun/xdelta3-wasm/-/xdelta3-wasm-0.2.0.tgz",
+    "packageSha256": "2d03fdbb3a4a4e71f10cb9acec5e6dea92d52361118e1bbae0ba329584bdc672",
+    "encoderJsSha256": "ef7ff8b4c56a89e6f2567c34e03194cea8bf5631c63bb609ad202e30a3161b5a",
+    "embeddedJsSha256": "7e04bfc7c482a1f352cfd711773e0ac420907027815a5ca12437731fed362c7d",
+    "wasmBytes": 38861,
+    "wasmSha256": "bfb81d752492173d2b09ed587e7112f359e2ffe9219d268bf4096ee25e7f2e63",
+    "runtime": "system Node; statically reviewed pure JS/WASM encoder; no native executable",
+    "generation": ".work/generate-vcdiff-reference.cjs",
+    "targetInputChunkBytes": 16381,
+    "windowAssembly": "Encode each fixed-size target partition independently against the same source; concatenate unchanged encoder window streams under their common d6c3c40000 header, as RFC 3284 windows have independent caches.",
+    "referenceWindowBytes": 16384
+  },
+  "recipeDefinition": "xorshift32-high-byte: uint32 state seeded nonzero; for each byte state ^= state<<13; state ^= state>>>17; state ^= state<<5; state >>>= 0; byte = state>>>24. Concatenate recipe entries; source slices use byte offsets.",
+  "source": {
+    "recipe": [
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 527940318,
+        "bytes": 32768
+      }
+    ],
+    "bytes": 32768,
+    "sha256": "b88bb79d5f97ff7b8163a18d792f6760ea15c4b5ea5d6c54da6a762d721e6a07"
+  },
+  "target": {
+    "recipe": [
+      {
+        "type": "source",
+        "offset": 0,
+        "bytes": 30000
+      },
+      {
+        "type": "literal",
+        "base64": "bmV3IHdpbmRvdyBib3VuZGFyeQo="
+      },
+      {
+        "type": "source",
+        "offset": 512,
+        "bytes": 25000
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 2317483808,
+        "bytes": 1024
+      },
+      {
+        "type": "source",
+        "offset": 4096,
+        "bytes": 12000
+      },
+      {
+        "type": "repeat",
+        "byte": 65,
+        "bytes": 5000
+      }
+    ],
+    "bytes": 73044,
+    "sha256": "e462421696db2c9ec8f9d312c873f5ed879777dfe1c985b490849967068d5989"
+  },
+  "patch": {
+    "bytes": 1159,
+    "sha256": "2e22da8dc2ce192f3f8c77d902eee6b0bc73ff1c5d76d8337b029b885d732996",
+    "base64": "1sPEAAABgYAAAAyBgAAAAAQBE4GAAAABgeYwhAAmgYAAABQIA25ldyB3aW5kb3cgYm91bmRhcnkKI+owARQTlTzqMAABgYAAmTwMgYAAAAAEAROBgAAAAYGnKKAAiBSBgAAAiAAJAw32c99WPkoIG5g/2PJmKdbyt52iFuSnSBEUbWQUrVWMWo9Kkz782MfOb246I1VO6QyHc3RNqM9NmbfuCY+gv2Qv7ibVBvNzv/pWxXKlVDfzRxrOR2NodfwUwf8AIIbQuVbXNmQqMfi7xgrfrJKYZCAER2fZ9qbzyCMu42LLRJa5SYqtlEMDXjX+Ps05elqWzgW7Ws7A48DWvrO/JS1xJGJ9zi+6uAaI87AgNCndhphY1W4NxHY/TwRJY1oJ5MEezvtLy2+dPjlNGFDzBh1LFXhlO0UMSxU2mZuFuyKc+vfq08l2NshgHFvjZ93gKb4RaerUP6bpIApcLxrVnE9gPYhUlnIjcWi1FgwZotxoxJDZkXzXodPHqbbsuI60SzG08K+h5R7tk8gIB7lM1Dmcim/gViGvegZCbL0VFa1qeKMwn9p9BjOLnkpKL4fmCB2AAj3dHlFWC+6SS6yYRoJyYpVj1EGIduliNOmmTT3xZ19aChXlyoWFbcbrHJKWJ6vcGJi/62+qCvxlnGCk8915K0okGekAV8s8dYLOr6a0oylfCVlsdVAvxz43Awu0cx0IkJ80bv6gpx3P2S2lzmaLgsn26W9TV05z/3Lv9vgObWCTKDeg1O0IxxK8C/XRyBGxfj8NHqnSeIouBj569W6EvdA7BlgMWvVCF/+bKfb1oR4KGwsmorx+N2j4y59Aues6TbtYfipE8Pux85DGiw0nYq4oEan7RYXoECe/AMSo4CAln9P8EBLH1CdLDASyTO36fpBWMK4602bBPOdfuIqoktziDyNEyjjyWWLoNehDl3XrxZFE1LNjzFXrX9EvETv6E7fBYJi2PpX/lNd8MD5OJJoOVIxNts22Q1FfQzOpUML+pdpddnNpdxPHmMeuHDGCszBJmYXcxd6C8e596Y0yWVo3Vo2WHyLID5WzOCOE4UOJczWMUkslBtT0nnb3VMs9nAMtk1CFlZQBsbW6iOgKMsa0T3QSMRHpwxTDv/JlFAAs30tJKL9Ow7gZ7GQIbJdonWmTpCU7nnBwX/i76ZYwGsSyNyJl9CwSy+4UHilvxINAl6PzsfjB/G4jJNffnAW4z6+yy8Y4jWU26cMOwDprUzcypzJ/0y/I8iYzYZ+OnwiYe/bOShD8je379UgcWx7ysMcywI07xIVmXJBFBEFouPDBE01W4M5yuSBvq2DshL/RvGf5x0fhJxvwqPuJOIy9h03TiyF0DthVqteP0K765LEKRchSZP+VgM+0O30C2ayMUyZilApZ4fA30CrWU3XUfYhl2dXfbKP6XpNCrPS07H0RFVEfoYelFeKSx30pn4b8VHymgiCV056Jwo3VVa4eLbEtnA9OVUjeNGJHF0N94REjrWwBiAATyhStbAABk0zqFA66VAABBgFBE5NMAKcIAA=="
+  },
+  "coverage": {
+    "windows": 5,
+    "maxWindowBytes": 16384,
+    "opcodeCounts": {
+      "0": 1,
+      "1": 2,
+      "19": 5,
+      "35": 2
+    },
+    "copyModeCounts": {
+      "0": 5,
+      "1": 2
+    },
+    "instructionTypeCounts": {
+      "COPY": 7,
+      "ADD": 2,
+      "RUN": 1
+    },
+    "pairedOpcodes": [],
+    "sourceWindows": 5,
+    "targetWindows": 0
+  }
+}

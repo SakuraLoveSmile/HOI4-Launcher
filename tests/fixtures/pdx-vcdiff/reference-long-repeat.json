@@ -1,0 +1,85 @@
+{
+  "formatVersion": 1,
+  "name": "long-repeat",
+  "description": "Long overlapping target repeats, uniform runs and new entropy over a small source.",
+  "origin": {
+    "package": "@limrun/xdelta3-wasm",
+    "version": "0.2.0",
+    "license": "Apache-2.0",
+    "packageUrl": "https://registry.npmjs.org/@limrun/xdelta3-wasm/-/xdelta3-wasm-0.2.0.tgz",
+    "packageSha256": "2d03fdbb3a4a4e71f10cb9acec5e6dea92d52361118e1bbae0ba329584bdc672",
+    "encoderJsSha256": "ef7ff8b4c56a89e6f2567c34e03194cea8bf5631c63bb609ad202e30a3161b5a",
+    "embeddedJsSha256": "7e04bfc7c482a1f352cfd711773e0ac420907027815a5ca12437731fed362c7d",
+    "wasmBytes": 38861,
+    "wasmSha256": "bfb81d752492173d2b09ed587e7112f359e2ffe9219d268bf4096ee25e7f2e63",
+    "runtime": "system Node; statically reviewed pure JS/WASM encoder; no native executable",
+    "generation": ".work/generate-vcdiff-reference.cjs",
+    "targetInputChunkBytes": 16381
+  },
+  "recipeDefinition": "xorshift32-high-byte: uint32 state seeded nonzero; for each byte state ^= state<<13; state ^= state>>>17; state ^= state<<5; state >>>= 0; byte = state>>>24. Concatenate recipe entries; source slices use byte offsets.",
+  "source": {
+    "recipe": [
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 289699754,
+        "bytes": 65536
+      }
+    ],
+    "bytes": 65536,
+    "sha256": "62d2a93b9d5e324894655992ac249bd9283f23cb5059faa1c4b0f39000d684b9"
+  },
+  "target": {
+    "recipe": [
+      {
+        "type": "source",
+        "offset": 0,
+        "bytes": 2048
+      },
+      {
+        "type": "pattern",
+        "hex": "6162636465662f6768696a6b2f",
+        "bytes": 500000
+      },
+      {
+        "type": "repeat",
+        "byte": 81,
+        "bytes": 16384
+      },
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 1635756288,
+        "bytes": 512
+      }
+    ],
+    "bytes": 518944,
+    "sha256": "11f5a8a6cdd405f0c1c45e706552521e2ce7e79dedf78fec5ed23614aabffef8"
+  },
+  "patch": {
+    "bytes": 562,
+    "sha256": "a4bc23a86fb2faad5f67e55bef7721391064c35375da4d2cbde59e3bc7f153d7",
+    "base64": "1sPEAAABkAAAhCef1iAAhA4PAmFiY2RlZi9naGlqay9RH4B1daiphFMRCYHkT/gP0qm7dartjDV2L9mBcl9qJQ5KohrwNzEL4fkUGL7sk60LIO/cgdoDyMuPobESKHYVsJg8yW7P5XM85G9++OcoUShdQ+58mx9LWc8YghvN/Y3fqFYhEtHsL55VG/Fw3kSxlATOWgfERDXepYe5zSrbW8CqQaKNtJ5t08Nwd4QfQ16FaavAHhqRZgPeBC7Rv3n5hpI617lw0VqUbiiyNB9VwfyBB7FJekqqvDeiAPfRu9WpEgNkKaaUVxOBpg7vxZmYFYkoP6p7ijXVvtgionX8HfIi0xDyqJZFLwDzjwIS3157hJZ0kEh53bSpC+vJlhjaW/KEyACuMinGBpf/wdLyyXkDHRE0P0XlOJGP2RgOndBQvn2CfwArH0bS1N0YmfQz3kLbVurycBV1GVKGruJeALl9UdlEzrXMFJyklZ1cCwCWC8Yq7eIhEUNr5dvK1mYRc0FYaapqIBltTIDlFFv5uBtM/AadBGeuO4U16dCEj4Rxf9Hq+K/ZiByalaqx1y9B4ZfM528yVSVZMoqIXniF/b3h2+64MzjuwsouCRFM1wah/vIuRZm81VuVVBhTygtRYDrU1zh1pPfCbrTQ/EHWZKakItpSLsyajiqQaWcH59k48zRn6ZmHyFVCW/r7mD9VrutWOlctfPZVpyvN3J/ZzGoTkAAOI57CEwCBgAABhAAADQ=="
+  },
+  "coverage": {
+    "windows": 1,
+    "maxWindowBytes": 518944,
+    "opcodeCounts": {
+      "0": 1,
+      "1": 1,
+      "14": 1,
+      "19": 1,
+      "35": 1
+    },
+    "copyModeCounts": {
+      "0": 1,
+      "1": 1
+    },
+    "instructionTypeCounts": {
+      "COPY": 2,
+      "ADD": 2,
+      "RUN": 1
+    },
+    "pairedOpcodes": [],
+    "sourceWindows": 1,
+    "targetWindows": 0
+  }
+}

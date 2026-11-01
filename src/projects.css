@@ -1,0 +1,232 @@
+.projects-workspace .section-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.projects-workspace .button-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.project-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 18px;
+}
+.project-list {
+  padding: 12px;
+  align-self: start;
+}
+.project-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--text);
+}
+.project-item.selected {
+  background: var(--gold-soft, rgba(199, 167, 104, 0.1));
+  border-color: var(--gold);
+}
+.project-item span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.project-item small {
+  display: block;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.project-detail {
+  padding: 22px;
+  min-width: 0;
+}
+.project-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  gap: 7px;
+  margin-bottom: 18px;
+}
+.project-tabs button {
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  background: transparent;
+}
+.project-tabs button.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.project-section > button {
+  align-self: flex-start;
+}
+.project-section label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: var(--text);
+}
+.project-section input:not([type="checkbox"]),
+.project-section select,
+.project-section textarea {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  min-width: 0;
+}
+.project-section .project-checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+  line-height: 1.7;
+}
+.project-checkbox input {
+  margin-top: 6px;
+}
+.project-notice {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  line-height: 1.65;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.project-notice.warning {
+  color: var(--gold);
+}
+.project-scroll {
+  overflow: auto;
+  max-height: 420px;
+}
+.project-table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+}
+.project-table th,
+.project-table td {
+  padding: 12px 9px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.project-table th {
+  color: var(--muted);
+}
+.project-table td:first-child {
+  max-width: 300px;
+  overflow-wrap: anywhere;
+}
+.project-table select {
+  max-width: 150px;
+}
+.project-file-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+.project-issue {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  border-left: 2px solid var(--gold);
+  background: var(--bg);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.project-history > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.project-history > div > span {
+  flex: 1;
+  min-width: 150px;
+}
+.project-diff {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.project-diff h3 {
+  color: var(--muted);
+  font-size: 12px;
+}
+.project-diff pre {
+  background: var(--bg);
+  padding: 10px;
+  overflow: auto;
+  max-height: 240px;
+  font-size: 11px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.project-editor {
+  font-family: Consolas, monospace;
+  min-height: 200px;
+  resize: vertical;
+}
+.modal:has(.project-diff) {
+  width: min(1100px, calc(100vw - 64px));
+  max-width: none;
+  max-height: calc(100vh - 70px);
+  overflow: auto;
+}
+.project-diff pre {
+  min-height: 160px;
+  font-size: 12px;
+}
+.project-detail .path-box {
+  overflow-wrap: anywhere;
+}
+.project-chunks summary {
+  cursor: pointer;
+  color: var(--gold);
+  padding: 8px 0;
+}
+.project-chunk {
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+}
+.project-chunk label {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project-chunk .project-diff pre {
+  min-height: 64px;
+  max-height: 180px;
+}
+@media (max-width: 1150px) {
+  .project-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .project-detail {
+    padding: 16px;
+  }
+  .project-tabs button {
+    padding: 10px;
+  }
+}

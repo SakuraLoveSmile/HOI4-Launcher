@@ -1,0 +1,34 @@
+name: Windows portable release
+on:
+  push:
+    tags: ["v*.*.*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Verify release version
+        shell: pwsh
+        run: |
+          $releaseVersion = node -p "require('./package.json').version"
+          if ($env:GITHUB_REF_NAME -ne "v$releaseVersion") { throw 'Tag and package version differ.' }
+      - run: npm ci
+      - run: npm test
+      - name: Build portable launcher
+        run: npm run package -- --publish never
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+      - run: node scripts/create-update-manifest.cjs
+      - name: Publish release and update checksum
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          $releaseVersion = node -p "require('./package.json').version"
+          gh release create "$env:GITHUB_REF_NAME" "release/IRONCLAD-$releaseVersion-portable.exe" "release/updater.json" --verify-tag --generate-notes --title "IRONCLAD $releaseVersion"

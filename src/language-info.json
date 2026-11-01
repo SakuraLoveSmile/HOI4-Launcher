@@ -1,0 +1,14 @@
+[
+  { "id": "en", "name": "English", "locale": "en-US" },
+  { "id": "de", "name": "Deutsch", "locale": "de-DE" },
+  { "id": "es", "name": "Español", "locale": "es-ES" },
+  { "id": "fr", "name": "Français", "locale": "fr-FR" },
+  { "id": "ja", "name": "日本語", "locale": "ja-JP" },
+  { "id": "ko", "name": "한국어", "locale": "ko-KR" },
+  { "id": "pl", "name": "Polski", "locale": "pl-PL" },
+  { "id": "pt", "name": "Português", "locale": "pt-BR" },
+  { "id": "ru", "name": "Русский", "locale": "ru-RU" },
+  { "id": "tr", "name": "Türkçe", "locale": "tr-TR" },
+  { "id": "zh-hans", "name": "简体中文", "locale": "zh-CN" },
+  { "id": "zh-hant", "name": "繁體中文", "locale": "zh-TW" }
+]

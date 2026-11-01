@@ -1,0 +1,26 @@
+{
+  "formatVersion": 1,
+  "package": "xz-decompress",
+  "version": "0.2.3",
+  "packageUrl": "https://registry.npmjs.org/xz-decompress/-/xz-decompress-0.2.3.tgz",
+  "packageSha256": "b590b7ea774bd82e812d74c572d6c9fcd4abef4da752c974e8d335439f63e69c",
+  "packageIntegrity": "sha512-O8v6HG8T0PrKBcpyWA13GkSYWFvncwzuzcLx5A7++l3HsE3atmoetXjIxrZ/JV/nbvSZ7WS4+3XvREZuVn+rEA==",
+  "gitHead": "02e7ec3ee164de24cd3d1baf76911dd0be68a7c0",
+  "upstream": {
+    "file": "xz-decompress.upstream.wasm",
+    "bytes": 12558,
+    "sha256": "eb37d130fd379597765e87a044b243fb6ac6d0870ea468374003b9d4c2bee0e4",
+    "memoryMinimumBytes": 131072,
+    "memoryMaximumBytes": null
+  },
+  "bounded": {
+    "file": "xz-decompress.memory64m.wasm",
+    "bytes": 12560,
+    "sha256": "1fd12eafd50a45cd9708493fbf784cc6d73a7367646721c58b26c4e3cfac8896",
+    "memoryMinimumBytes": 131072,
+    "memoryMaximumBytes": 67108864
+  },
+  "transformation": "Only WASM section 5: one memory, flags 0 to 1, minimum 2 pages unchanged, maximum 1024 pages. All other section bytes unchanged.",
+  "reproduction": "node scripts/vendor-xz-wasm.cjs --check",
+  "runtime": "pdx-xz.cjs verifies the original hash and applies the same transformation before instantiation, allowing a lower page-aligned maximum."
+}

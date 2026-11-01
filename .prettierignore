@@ -1,0 +1,2 @@
+# Preserve original bytes used by detached-signature verification.
+tests/fixtures/pdx-signatures/repository.json

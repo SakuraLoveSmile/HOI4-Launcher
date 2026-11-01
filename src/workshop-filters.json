@@ -1,0 +1,37 @@
+{
+  "categories": [
+    ["", "全部分类"],
+    ["Alternative History", "架空历史"],
+    ["Gameplay", "玩法"],
+    ["Graphics", "画面"],
+    ["Translation", "翻译"],
+    ["Balance", "平衡"],
+    ["Events", "事件"],
+    ["Fixes", "修复"],
+    ["Historical", "历史"],
+    ["Map", "地图"],
+    ["Military", "军事"],
+    ["National Focuses", "国策"],
+    ["Sound", "音效"],
+    ["Technologies", "科技"],
+    ["Utilities", "实用工具"]
+  ],
+  "sorts": [
+    ["best", "热门作品", null],
+    ["weekly", "本周热门", 3],
+    ["created", "最新发布", 1],
+    ["recent", "最近更新", 19],
+    ["subscriptions", "最多订阅", 12],
+    ["rated", "最高好评", 0],
+    ["dependencies", "常用前置", 20],
+    ["collections", "热门合集成员", 21],
+    ["trending", "热门趋势", 3],
+    ["votes", "赞数最多", 10]
+  ],
+  "languages": [
+    ["all", "全部语言"],
+    ["chinese", "仅中文内容"],
+    ["non-chinese", "非中文内容"]
+  ],
+  "trendDays": [7, 30, 90, 365]
+}

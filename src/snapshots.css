@@ -1,0 +1,105 @@
+.modal:has(.snapshot-manager) {
+  width: min(800px, calc(100vw - 80px));
+  max-width: 800px;
+}
+.snapshot-manager {
+  min-width: 0;
+}
+.snapshot-manager h3 {
+  font-size: 16px;
+  margin: 15px 0 8px;
+}
+.snapshot-create {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin: 18px 0;
+}
+.snapshot-create .campaign-field {
+  flex: 1;
+  margin: 0;
+}
+.snapshot-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-top: 22px;
+}
+.snapshot-toolbar label {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  flex-direction: column;
+  color: var(--muted);
+  font-size: 12px;
+  min-width: 0;
+}
+.snapshot-toolbar select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+.snapshot-detail {
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  margin: 14px 0;
+}
+.snapshot-detail > p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.snapshot-mods {
+  max-height: 230px;
+  overflow: auto;
+  border-top: 1px solid var(--line);
+  margin-top: 15px;
+}
+.snapshot-mods > div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.snapshot-mods small {
+  color: var(--muted);
+  text-align: right;
+  flex-shrink: 0;
+}
+.snapshot-retained {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  padding: 10px 0;
+}
+.snapshot-retained span {
+  min-width: 0;
+}
+.snapshot-empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 25px;
+}
+.snapshot-manager details > summary {
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.snapshot-manager > p {
+  line-height: 1.7;
+}
+.playset-workspace .snapshot-manager .button {
+  white-space: normal;
+}

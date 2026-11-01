@@ -1,0 +1,55 @@
+.launcher-updates {
+  display: grid;
+  gap: 14px;
+}
+.launcher-updates .section-heading {
+  margin-bottom: 0;
+}
+.launcher-updates .section-description,
+.launcher-update-status {
+  margin: 0;
+}
+.launcher-update-status {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.launcher-update-release {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--panel-inset);
+}
+.launcher-update-release strong {
+  font-size: 13px;
+}
+.launcher-update-notes {
+  max-height: 220px;
+  overflow: auto;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+.launcher-update-progress {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+}
+.launcher-update-progress progress {
+  width: 100%;
+  accent-color: var(--gold);
+}
+.launcher-update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.launcher-updates .error {
+  color: var(--danger);
+  overflow-wrap: anywhere;
+}

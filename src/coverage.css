@@ -1,0 +1,170 @@
+.modal:has(.coverage-manager) {
+  width: min(1000px, calc(100vw - 50px));
+}
+.coverage-manager {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+.coverage-manager > p {
+  margin: 0;
+}
+.coverage-toolbar,
+.coverage-summary {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.coverage-toolbar > strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.coverage-summary {
+  font-size: 11px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.coverage-partial {
+  color: var(--warning);
+}
+.coverage-mods {
+  color: var(--muted);
+  font-size: 11px;
+}
+.coverage-mods summary {
+  cursor: pointer;
+}
+.coverage-mods p {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  overflow-wrap: anywhere;
+}
+.coverage-filters {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 12px;
+}
+.coverage-filters label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+.coverage-filters select,
+.coverage-filters input {
+  width: 100%;
+  min-width: 0;
+  padding: 9px;
+  color: var(--text);
+  background: var(--field);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+}
+.coverage-columns {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.8fr) minmax(0, 1.5fr);
+  gap: 15px;
+  align-items: start;
+}
+.coverage-groups {
+  display: grid;
+  gap: 6px;
+  max-height: 440px;
+  overflow: auto;
+}
+.coverage-groups button,
+.coverage-sources button {
+  border: 1px solid var(--line);
+  background: var(--field);
+  color: var(--text-secondary);
+  padding: 11px;
+  border-radius: 4px;
+  text-align: left;
+  min-width: 0;
+  cursor: pointer;
+  display: grid;
+  gap: 7px;
+}
+.coverage-groups button.selected {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+}
+.coverage-groups small,
+.coverage-sources span {
+  color: var(--muted);
+  font-size: 10px;
+}
+.coverage-groups strong,
+.coverage-sources strong {
+  font-size: 11px;
+  font-weight: 500;
+}
+.coverage-groups strong,
+.coverage-sources span,
+.coverage-detail h3,
+.coverage-snippet p {
+  overflow-wrap: anywhere;
+}
+.coverage-detail {
+  min-width: 0;
+}
+.coverage-detail h3 {
+  margin: 0 0 7px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.coverage-sources {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+}
+.coverage-snippet {
+  margin-top: 12px;
+  font-size: 11px;
+  min-width: 0;
+}
+.coverage-snippet p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.coverage-snippet pre {
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px 0;
+  max-height: 300px;
+  overflow: auto;
+  font-size: 10px;
+  line-height: 1.8;
+}
+.coverage-snippet pre > span {
+  display: block;
+  min-width: max-content;
+  padding: 0 12px;
+  white-space: pre;
+}
+.coverage-snippet pre > span.highlight {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+.coverage-snippet i {
+  display: inline-block;
+  width: 35px;
+  color: var(--faint);
+  font-style: normal;
+  user-select: none;
+}
+@media (max-width: 700px) {
+  .coverage-columns {
+    grid-template-columns: 1fr;
+  }
+  .coverage-groups {
+    max-height: 180px;
+  }
+  .coverage-filters {
+    grid-template-columns: 1fr;
+  }
+}

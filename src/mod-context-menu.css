@@ -1,0 +1,111 @@
+.mod-context-menu {
+  position: fixed;
+  z-index: 150;
+  width: 264px;
+  max-width: calc(100vw - 16px);
+  max-height: calc(100vh - 16px);
+  overflow-y: auto;
+  padding: 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  background: var(--panel-raised);
+  color: var(--text-secondary);
+  box-shadow: 0 12px 36px #0008;
+}
+.mod-context-menu-heading {
+  display: grid;
+  gap: 5px;
+  padding: 9px 10px 10px;
+  font-size: 11px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: none;
+}
+.mod-context-menu-heading > span,
+.mod-context-menu-heading > small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mod-context-menu-heading > small {
+  font-size: 10px;
+  color: var(--faint);
+  font-family: Consolas, monospace;
+}
+.mod-context-menu [role="menuitem"] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 35px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  text-align: left;
+  font-size: 12px;
+}
+.mod-context-menu [role="menuitem"] > svg {
+  color: var(--muted);
+}
+.mod-context-menu [role="menuitem"]:focus-visible,
+.mod-context-menu [role="menuitem"]:hover:not(:disabled) {
+  outline: 0;
+  background: var(--hover);
+  color: var(--text);
+}
+.mod-context-menu [role="menuitem"]:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--gold-line);
+}
+.mod-context-menu [role="menuitem"].is-danger,
+.mod-context-menu [role="menuitem"].is-danger > svg {
+  color: var(--danger);
+}
+.mod-context-menu [role="menuitem"].is-danger:hover:not(:disabled) {
+  background: var(--danger-soft);
+}
+.mod-context-menu [role="separator"] {
+  height: 1px;
+  margin: 5px 4px;
+  background: var(--line);
+}
+.mod-context-name-form {
+  display: grid;
+  gap: 15px;
+}
+.mod-context-name-form > label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.mod-context-name-form input {
+  width: 100%;
+}
+.mod-context-original-name {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--field);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.mod-context-original-name > span:first-child {
+  color: var(--muted);
+}
+.mod-context-current-name {
+  font-weight: 600;
+  margin-bottom: 15px;
+  overflow-wrap: anywhere;
+}
+.button.mod-context-delete-confirm {
+  background: var(--danger-soft);
+  border: 1px solid var(--danger-line);
+  color: var(--danger);
+}
+.playset-columns .mod-row[tabindex]:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: -1px;
+}

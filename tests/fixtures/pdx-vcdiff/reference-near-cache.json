@@ -1,0 +1,1228 @@
+{
+  "formatVersion": 1,
+  "name": "near-cache",
+  "description": "Four source streams revisited with small advancing offsets and changing separators.",
+  "origin": {
+    "package": "@limrun/xdelta3-wasm",
+    "version": "0.2.0",
+    "license": "Apache-2.0",
+    "packageUrl": "https://registry.npmjs.org/@limrun/xdelta3-wasm/-/xdelta3-wasm-0.2.0.tgz",
+    "packageSha256": "2d03fdbb3a4a4e71f10cb9acec5e6dea92d52361118e1bbae0ba329584bdc672",
+    "encoderJsSha256": "ef7ff8b4c56a89e6f2567c34e03194cea8bf5631c63bb609ad202e30a3161b5a",
+    "embeddedJsSha256": "7e04bfc7c482a1f352cfd711773e0ac420907027815a5ca12437731fed362c7d",
+    "wasmBytes": 38861,
+    "wasmSha256": "bfb81d752492173d2b09ed587e7112f359e2ffe9219d268bf4096ee25e7f2e63",
+    "runtime": "system Node; statically reviewed pure JS/WASM encoder; no native executable",
+    "generation": ".work/generate-vcdiff-reference.cjs",
+    "targetInputChunkBytes": 16381
+  },
+  "recipeDefinition": "xorshift32-high-byte: uint32 state seeded nonzero; for each byte state ^= state<<13; state ^= state>>>17; state ^= state<<5; state >>>= 0; byte = state>>>24. Concatenate recipe entries; source slices use byte offsets.",
+  "source": {
+    "recipe": [
+      {
+        "type": "xorshift32-high-byte",
+        "seed": 308804522,
+        "bytes": 131072
+      }
+    ],
+    "bytes": 131072,
+    "sha256": "1cb8e71c031b876e98d4b98bd1c51a6d1f9ccff87f9c82ffdde345d2e6237e45"
+  },
+  "target": {
+    "recipe": [
+      {
+        "type": "literal",
+        "base64": "OjA6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4096,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjA6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 32768,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjA6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 65536,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjA6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98304,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4192,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 32864,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 65632,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98400,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4288,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 32960,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 65728,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98496,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjM6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4384,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjM6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 33056,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjM6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 65824,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjM6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98592,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjQ6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4480,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjQ6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 33152,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjQ6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 65920,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjQ6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98688,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjU6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4576,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjU6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 33248,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjU6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 66016,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjU6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98784,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjY6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4672,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjY6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 33344,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjY6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 66112,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjY6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98880,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojc6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4768,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojc6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 33440,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojc6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 66208,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojc6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 98976,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojg6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4864,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojg6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 33536,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojg6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 66304,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojg6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 99072,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojk6MDo="
+      },
+      {
+        "type": "source",
+        "offset": 4960,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojk6MTo="
+      },
+      {
+        "type": "source",
+        "offset": 33632,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojk6Mjo="
+      },
+      {
+        "type": "source",
+        "offset": 66400,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "Ojk6Mzo="
+      },
+      {
+        "type": "source",
+        "offset": 99168,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEwOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5056,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEwOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 33728,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEwOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 66496,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEwOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99264,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjExOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5152,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjExOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 33824,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjExOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 66592,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjExOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99360,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEyOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5248,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEyOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 33920,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEyOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 66688,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEyOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99456,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEzOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5344,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEzOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34016,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEzOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 66784,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjEzOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99552,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE0OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5440,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE0OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34112,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE0OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 66880,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE0OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99648,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE1OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5536,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE1OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34208,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE1OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 66976,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE1OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99744,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE2OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5632,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE2OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34304,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE2OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67072,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE2OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99840,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE3OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5728,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE3OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34400,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE3OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67168,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE3OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 99936,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE4OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5824,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE4OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34496,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE4OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67264,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE4OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100032,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE5OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 5920,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE5OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34592,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE5OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67360,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjE5OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100128,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIwOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6016,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIwOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34688,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIwOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67456,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIwOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100224,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIxOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6112,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIxOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34784,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIxOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67552,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIxOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100320,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIyOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6208,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIyOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34880,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIyOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67648,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIyOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100416,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIzOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6304,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIzOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 34976,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIzOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67744,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjIzOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100512,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI0OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6400,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI0OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35072,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI0OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67840,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI0OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100608,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI1OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6496,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI1OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35168,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI1OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 67936,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI1OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100704,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI2OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6592,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI2OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35264,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI2OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 68032,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI2OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100800,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI3OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6688,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI3OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35360,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI3OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 68128,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI3OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100896,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI4OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6784,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI4OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35456,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI4OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 68224,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI4OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 100992,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI5OjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6880,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI5OjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35552,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI5OjI6"
+      },
+      {
+        "type": "source",
+        "offset": 68320,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjI5OjM6"
+      },
+      {
+        "type": "source",
+        "offset": 101088,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMwOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 6976,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMwOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35648,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMwOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 68416,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMwOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 101184,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMxOjA6"
+      },
+      {
+        "type": "source",
+        "offset": 7072,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMxOjE6"
+      },
+      {
+        "type": "source",
+        "offset": 35744,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMxOjI6"
+      },
+      {
+        "type": "source",
+        "offset": 68512,
+        "bytes": 64
+      },
+      {
+        "type": "literal",
+        "base64": "OjMxOjM6"
+      },
+      {
+        "type": "source",
+        "offset": 101280,
+        "bytes": 64
+      }
+    ],
+    "bytes": 8920,
+    "sha256": "f9b50ae855a1bd4895d727ab6944d0a922f62e2eddd6f13d3bef7bad51aa5b4b"
+  },
+  "patch": {
+    "bytes": 1232,
+    "sha256": "b2a7e7693c4476ba2af99f70d855b411f7c4ab28e8b98e60fb8e249ad5d788b8",
+    "base64": "1sPEAAABhfdgoACJQ8VYAIJyg0CDCDowOjA6OjA6MTo6MDoyOjowOjM6OjE6MDo6MToxOjoxOjI6OjE6Mzo6MjowOjoyOjE6OjI6Mjo6MjozOjozOjA6OjM6MTo6MzoyOjozOjM6OjQ6NDoxOjo0OjI6OjQ6Mzo6NTowOjo1OjE6OjU6Mjo6NTozOjo2OjA6OjY6MTo6NjoyOjo2OjM6Ojc6MDo6NzoxOjo3OjI6Ojc6Mzo6ODo4OjE6Ojg6Mjo6ODozOjo5OjA6Ojk6MTo6OToyOjo5OjM6OjExOjI6Mzo6MTE6Mjo6MToxMToyOjM6OjExOjI6Mzo6MTE6MjozOjoxMToyOjM6OjExOjI6Mzo6MTE6MjozOjoxMToyOjM6OjExOjI6Mzo6MjE6MjozOjoyMToyOjM6OjIxOjI6Mzo6MjE6MjozOjoyMToyOjM6OjIxOjI6Mzo6MjE6MjozOjoyMToyOjM6OjIxOjI6OjI6MjE6MjozOjozMToyOjM6OjMxOjI6MzoGE0AGE0AGQ0AGI0AGE0AGQ0AGU0AGY0AGM0AGQ0AGU0AGY0AGM0AGQ0AGU0AGY0CyEz8GQ0AGU0AGI0AGQ0AGU0AGY0AGM0AGQ0AGU0AGY0AGM0AGQ0AGU0AGY0AGM0CyEz8GU0AGY0AGI0AGU0AGY0AGM0AGQ0DKE0AkA2NAJANDQCQDI0DKE0AkA2NAJANDQLMjP74TQCQDY0AkA0NAJAMjQMoTQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAJAMjQLITQCQDY0AkA0NAsyM/shNAJANjQCQDQ0AkAyNAshNAJANjQCQDQ0AkAyNAshNAJANjQCQDQ0AkAyNAAIHgAIKAAJk0YGBgYGBgYGBgYGBgghSDAYHff4KAAJ8EX2BgYGBgYGBgYGBgjHiGAYHff4KAAKRUX2BgYJEBh0BGgeAARoKAAEanQJI1iCBGgeAARoKAAJVQqHhFiQBGgeAARoKAAEaqMJUdiWBGgeAARoKAAEaraJVZikBGgeAARoKAAEatIJVdiyBGgeAARoKAAEauWJVhjABGgeAARoKAAEawEJVljGBGgeAARoKAAEaxSJVpjUBGgeAARoKAAEazAJVtjiBGgeAARoKAAEa0OJVwjwBGgeAARoKAAEa1cJVwj2BGgeAARoKAAEa3KJVwkEBGgeAARoKAAEa4YJVwkSBGgeAARoKAAEa6GJVwkgBGgeAARoKAAEa7UJVwkmBGgeAARoKAAEa9CJVwk0BGgeAARoKAAEa+QJVwlCBGgeAARoKAAEa/eJVwlQBGgeAARoKAAKtcwTCVcJVgRoHgAEaCgABGwmiVcJZARoHgAEaCgABGxCCVcJcgRoHgAEaCgABGxVg="
+  },
+  "coverage": {
+    "windows": 1,
+    "maxWindowBytes": 8920,
+    "opcodeCounts": {
+      "3": 64,
+      "6": 38,
+      "19": 27,
+      "35": 25,
+      "36": 64,
+      "51": 6,
+      "67": 31,
+      "83": 9,
+      "99": 30,
+      "178": 20,
+      "179": 2,
+      "190": 1,
+      "202": 3
+    },
+    "copyModeCounts": {
+      "0": 27,
+      "1": 111,
+      "2": 7,
+      "3": 34,
+      "4": 9,
+      "5": 30
+    },
+    "instructionTypeCounts": {
+      "ADD": 128,
+      "COPY": 218
+    },
+    "pairedOpcodes": [178, 179, 190, 202],
+    "sourceWindows": 1,
+    "targetWindows": 0
+  }
+}

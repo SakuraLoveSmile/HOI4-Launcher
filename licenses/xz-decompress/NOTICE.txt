@@ -1,0 +1,31 @@
+IRONCLAD includes the XZ decoding WebAssembly module embedded in
+xz-decompress 0.2.3, published by Tim Perry / HTTP Toolkit.
+
+Package: https://www.npmjs.com/package/xz-decompress/v/0.2.3
+Source: https://github.com/httptoolkit/xz-decompress
+Package gitHead: 02e7ec3ee164de24cd3d1baf76911dd0be68a7c0
+The original package archive, original JavaScript bundle, package metadata,
+README, native bridge source and dependency notices accompany this file.
+
+The following notice is reproduced verbatim from the original JS bundle:
+
+/*!
+ * Based on xzwasm (c) Steve Sanderson. License: MIT - https://github.com/SteveSanderson/xzwasm
+ * Contains xz-embedded by Lasse Collin and Igor Pavlov. License: Public domain - https://tukaani.org/xz/embedded.html
+ * and walloc (c) 2020 Igalia, S.L. License: MIT - https://github.com/wingo/walloc
+ */
+
+The complete MIT permission text is provided in LICENSE-MIT.txt; walloc's
+copyright/permission text is retained in LICENSE-WALLOC.txt and its complete
+source header. COPYING-XZ-EMBEDDED.txt is copied from the xz-embedded revision
+6f0e0c4 referenced by the package source. The walloc source is from revision
+a93409f5ebd49c875514c5fee30d3b151f7b0882, also referenced by that source.
+
+IRONCLAD modification: only the original WASM memory declaration is changed
+to add a hard maximum of 64 MiB (or a lower requested page-aligned limit).
+Function bodies, data sections and all other WASM sections are unchanged.
+The unmodified module is retained for provenance and deterministic offline
+transformation. It is hash verified and transformed before instantiation;
+IRONCLAD does not instantiate the unbounded original module.
+
+No native addon, liblzma DLL, official CPatch or xdelta3 executable is used.
